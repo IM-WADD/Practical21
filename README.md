@@ -5,13 +5,13 @@ Stage 1 covers ES6 modules, beginning with a simple exercise to get you used to 
 ### Exercise 1.1 - Using ES6 modules
 In the stage 1 folder, you will find a variation of the room management system shown in class. This application is lacking some feedback for the user but it is functional! 
 
-Notice that the scripts folder contains A LOT of different JavaScript files. Open up each HTML file and take a look at the scripts that it imports using the traditional approach. Take a moment to familiarise yourself with what the application does and what is in each file.
+Notice that the scripts folder contains A LOT of different JavaScript files. Open up each HTML file and take a look at the scripts that it links using the traditional approach. Take a moment to familiarise yourself with what the application does and what is in each file.
 
 Your task is convert this application from the traditional method of using multiple script files to the more modern ES6 module approach. Here are the basic steps:
 
 1. In each HTML file, remove all `<script>` tags except the last one. The last script imported is the entry point--the file that runs code specific to the current page when the page is loaded.
 2. In the remaining `<script>` tag in each HTML file, add the attribute `type="module"`.
-3. Now for the tricky part... In each JavaScript file, export the fields (functions, classes etc) that are used by other fields and add import statements to import any functionality needed from other files.
+3. Now for the tricky part... In each JavaScript file, export the fields (functions, classes etc) that are used by other files and add import statements to import any functionality needed from other files.
 
 Hint: You can use the browser console to help with step 3. When you run the HTML file, you will probably see error messages, which you can use to figure out what needs to be exported and what needs to be imported. If something is "not defined", figure out what file it is in, export it, then import it into the file that has the error message.
 
@@ -19,6 +19,8 @@ Hint: You can use the browser console to help with step 3. When you run the HTML
 If you're not already using multiple JS files in your assessment, consider if it might be wise. If you have one big long JavaScript file that contains a mix of code only relevant to specific HTML files, and code that is used across multiple HTML files, then you should probably split the file up into separate JavaScript files. As a general rule, you should put code only used by one HTML file in a separate JS file. If you have JavaScript code used by multiple HTML files, put it in a common JS file that you can reuse across each HTML file that needs it.
 
 If you DO have multiple JS files already, consider using the ES6 module approach rather than the traditional approach of linking multiple scripts in the HTML. There is nothing inherently wrong with the traditional approach but modules are closer to the way most web frameworks work, which is fast becoming the industry standard.
+
+If you haven't got far enought to have much JavaScript, that's OK! Take time to plan out how you might make use of the module approach to keep your code well organised.
 
 ## Stage 2 - Assessment 2 marking
 In the sample code from lecture, there is an example submission for assessment 2 (web application only), called time-keeper. It is also included in this repo for convenience. Your job is to review the application against the marking criteria and the requirements listed in the brief. Follow the same steps that will be used when marking your assessment 2 submission (see below).
